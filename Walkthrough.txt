@@ -1,0 +1,22 @@
+Hi, 
+
+I have used cloudformation for this assignment.
+
+I have created a VPC stack to create all my subnets and availability zones. and security groups
+
+After that I have created an Load Balancer stack. I had to create a self signed SSL/TLS certificate. 
+I used cloudflare for the same and imported that. The redirection of http requests to https requests 
+has been done in this stack
+
+On top of that I have created an Autoscaling stack that launches instances in different availability 
+zones. I have used an Apache server ec2 instance and then created an image of that instance that is being 
+used as a reference to launch instances
+
+Services used : AWS Cloudformation, Certificate Manager, EC2, VPC, Cloudflare
+
+To improve the project I would have liked to set up a NAT gateway to help
+my private subnets interact with the internet using the public subnets. Since
+I am absolutely new to these AWS services, I would have liked to explore 
+other services better like route 53 to setup my domain and request ssl cert 
+from AWS Certified Authority as the cloudflare one was easy to set up but 
+kept throwing error when trying to import. 
